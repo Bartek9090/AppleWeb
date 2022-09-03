@@ -1,0 +1,138 @@
+.section-1 {
+
+
+    .cube-wrapper {
+        perspective: 100rem;
+		
+        .cube {
+            width: 20rem;
+            height: 22rem;
+            transform-style: preserve-3d;
+            transform: rotateX(0) rotateY(20deg) rotateZ(0);
+            position: relative;
+            top: -2rem;
+            transition: transform 0.5s;
+			top: -2rem;
+			@media(max-width:$small_device) {
+				position: absolute;
+				left: 20rem;
+				top: -15rem;
+				height: 32rem;
+
+				opacity: 0.5;			
+				} 
+			@media(max-width:$very_small_device) {
+				position: absolute;
+				left: 12rem;
+				top: -15rem;
+				height: 32rem;
+
+				opacity: 0.5;			
+				} 
+
+            .front-side {
+                width: 100%;
+                height: 100%;
+                background-color: #fee;
+                position: absolute;
+                transform-style: preserve-3d;
+                box-shadow: inset 0.1rem 0.1rem 0.1rem #ddd, inset -0.1rem -0.1rem 0.1rem #ddd;
+                padding: 2.5rem;
+                transform: translateZ(5rem);
+
+                img {
+					width: 100%;
+					height: 100%;
+					object-fit: contain;
+
+                }
+
+				&:before {
+					content: "";
+					width: 100%;
+					height: 10rem;
+					background-color: #fee;
+					position: absolute;
+					box-shadow: inset 0.1rem 0.1rem 0.1rem #ddd, inset -0.1rem -0.1rem 0.1rem #ddd;
+					top: 0;
+					left: 0;
+					transform: rotateX(-90deg);
+					transform-origin: top;
+				}
+	
+				&:after {
+					width: 100%;
+					height: 10rem;
+					background-color: #fee;
+					position: absolute;
+					box-shadow: inset 0.1rem 0.1rem 0.1rem #ddd, inset -0.1rem -0.1rem 0.1rem #ddd;
+					bottom: 0;
+					left: 0;
+					transform: rotateX(90deg);
+					transform-origin: bottom;
+				}
+            }
+
+           
+
+            .back-side {
+                width: 100%;
+                height: 100%;
+                background-color: #fee;
+                position: absolute;
+                transform-style: preserve-3d;
+                box-shadow: inset 0.1rem 0.1rem 0.1rem #ddd, inset -0.1rem -0.1rem 0.1rem #ddd;
+				transform: translateZ(-5rem);
+				 i {
+					font-size: 10rem;
+					color: $primaryColor;
+					text-shadow: 0.1rem 0.1rem 0.2rem #aaa, -0.1rem -0.1rem 0.2rem #aaa;
+					transform: rotateY(180deg);
+                }
+				
+				&:before {
+					content: "iPhone";
+					width: 10rem;
+					height: 100%;
+					background-color: #fee;
+					position: absolute;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					font-size: 2rem;
+					font-weight: 300;
+					color: #ec1919;
+					box-shadow: inset 0.1rem 0.1rem 0.1rem #ddd, inset -0.1rem -0.1rem 0.1rem #ddd;
+					top: 0;
+					left: 0;
+					transform: rotateY(-90deg);
+					transform-origin: left;
+				}
+				&:after {
+					content: "iPhone";
+					width: 10rem;
+					height: 100%;
+					background-color: #fee;
+					position: absolute;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					font-size: 2rem;
+					font-weight: 300;
+					color: #ec1919;
+					box-shadow: inset 0.1rem 0.1rem 0.1rem #ddd, inset -0.1rem -0.1rem 0.1rem #ddd;
+					top: 0;
+					right: 0;
+					transform: rotateY(90deg);
+					transform-origin: right;
+				}
+	
+                
+            }
+
+          
+        }
+    }
+
+
+}

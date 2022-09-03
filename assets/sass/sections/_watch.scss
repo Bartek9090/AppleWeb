@@ -1,0 +1,105 @@
+.section-3 {
+    height: 140vh;
+    padding: 20vh 0;
+    flex-direction: column;
+    position: relative;
+
+    .watches {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+		.watch-bands{
+			transition: margin 1s;
+            margin-left: 15rem;
+
+		}
+        div {
+            position: absolute;
+            .watch-band-img {
+                width: 15rem;
+                height: 15rem;
+                object-fit: contain;
+            }
+        }
+
+
+
+        .watch-cases {
+            flex-direction: column;
+			transition: margin-top 1s;
+
+            .watch-case-img {
+                width: 15rem;
+                height: 15rem;
+                object-fit: contain;
+            }
+        }
+
+    }
+
+    .watch-control {
+        position: absolute;
+        width: 4rem;
+        height: 4rem;
+        background-color: rgba(221, 221, 221, 0.4);
+        border-radius: 5rem;
+		
+		i {
+			font-size: 3rem;
+			color: $primaryColor;
+		}
+	
+        .hideControl{
+            opacity: 0;
+            visibility: hidden;
+    } 
+    }
+
+    .watch-top-control {
+        top: 22vh;
+        left: 50%;
+        transform: translateX(-50%);
+        
+       
+    }
+
+    .watch-right-control {
+        top: 50%;
+        right: 2rem;
+        transform: translateY(-50%);
+    }
+
+    .watch-left-control {
+        top: 50%;
+        left: 2rem;
+        transform: translateY(-50%);
+    }
+    .watch-down-control {
+        bottom: 20vh;
+        left: 50%;
+        transform: translateX(-50%);
+   
+    }
+    .hideControl{
+        opacity: 0;
+        visibility: hidden;
+    } 
+
+	.watch-btn{
+		position: absolute;
+		bottom: 30vh;
+		right: 25%;
+		width: 9rem;
+		height: 3rem;
+		background-color: $black-color;
+		color: $primaryColor;
+		border: 0.1rem dashed $white-color;
+		border-radius: 4rem;
+		font-size: 1.6rem;
+		font-weight: 200;
+		cursor: pointer;
+	}
+
+	
+}
